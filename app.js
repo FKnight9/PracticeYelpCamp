@@ -19,7 +19,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 
-seedDB();
+//seedDB(); //seed the database
 
 //Passport Configuration
 app.use(require("express-session")({
@@ -45,8 +45,3 @@ app.use("/", indexRoutes);
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The YelpCamp Server Has Started!");
 });
-
-
-
-
-
